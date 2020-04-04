@@ -1,0 +1,68 @@
+$font-roboto: 'Roboto', sans-serif;
+$font-logo: 'Purple Purse', cursive;
+
+$backgroud-colour: #221A15;
+$body-colour: #E5E5E5;
+$hover-colour: #B99292;
+$title-colour: #EBD9D9;
+$cta-colour: #C7A6A6;
+
+//breaking point
+$big-desktop: 81.25em;
+$laptop: 75em;
+$sm-laptop: 62.5em;
+$tablet: 56.25em;
+$sm-tablet: 35.43em;
+$phone: 31.25em;
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+
+    @media only screen and (max-width: $big-desktop){
+        font-size: 60%;
+    }
+
+    @media only screen and (max-width: $laptop){
+        font-size: 57%;
+    }
+
+    @media only screen and (max-width: $sm-laptop){
+        font-size: 50%;
+    }
+    // @media only screen and (max-width: $sm-tablet){
+    //     font-size: 40%;
+    // }
+
+    @media only screen and (max-width: $phone){
+        font-size: 45%;
+    }
+}
+
+body{
+     font-family: $font-roboto;
+     font-weight: 400;
+     font-size: 2rem;
+     line-height: 1.6;
+     background: $backgroud-colour;
+}
+
+
+.container{
+    background: $backgroud-colour;
+    display: grid;
+    grid-template-columns: repeat(14, minmax(min-content, 12rem ));
+
+    @media only screen and (max-width: $tablet){
+        display: block;
+    }
+    //grid-template-rows: 70vh min-content;
+}
